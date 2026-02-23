@@ -1,0 +1,7 @@
+path: C:\yolo_chipstack\data_yolo
+train: train/images
+val: val/images
+test: test/images
+names:
+  0: chip-stack-hexm
+  1: chip-stack
