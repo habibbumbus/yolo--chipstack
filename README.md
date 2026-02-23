@@ -20,6 +20,8 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install -r requirements.txt
+# GPU-enabled torch build (recommended for RTX 3050)
+python -m pip install --force-reinstall torch==2.5.1+cu121 torchvision==0.20.1+cu121 --index-url https://download.pytorch.org/whl/cu121
 ```
 
 ## Safe Checks (No Training)
@@ -56,4 +58,3 @@ You can also provide an explicit checkpoint path:
 ```powershell
 python scripts\train_yolo.py --data C:\yolo_chipstack\configs\chipstack.yaml --resume_path C:\yolo_chipstack\runs\yolov8s_chipstack_616\weights\best.pt --exist_ok
 ```
-
